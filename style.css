@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+body > :first-child,
+.container-1,
+.container-2,
+.container-2 > :first-child,
+.logo,
+form,
+section,
+section > * {
+    display: flex;
+}
+
+.container-1,
+.container-2,
+form,
+section > * {
+    flex-direction: column;
+}
+
+.container-1 > p,
+.container-2 > :first-child,
+.container-2 > :nth-child(2),
+button,
+button + p {
+    font-family: "Arial Bold", sans-serif;
+}
+
+.container-1 {
+    background-image: url("assets/photo-1599148401005-fe6d7497cb5e.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: calc(100vh * 372 / 581);
+}
+
+.container-1 > p {
+    text-align: center;
+    color: white;
+    font-size: 11px;
+}
+
+@font-face {
+    font-family: "Norse";
+    src: url("assets/Norse-Bold.otf");
+}
+
+.logo {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    justify-content: center;
+    margin-top: 40%;
+    font: 90px "Norse", "Norse-Bold";
+    padding-right: 16px;
+}
+
+.logo > * {
+    opacity: 1;
+}
+
+.logo > img {
+    height: 100px;
+    width: 100px;
+}
+
+.container-2 {
+    background-color: #f9fafb;
+    flex: 1;
+    justify-content: stretch;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.container-2 > :first-child {
+    align-items: flex-end;
+    padding-bottom: 32px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container-2 > * {
+    flex: 1;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.container-2 > :nth-child(2) {
+    background-color: white;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    padding-bottom: 32px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container-2 > :nth-child(2) > p:first-of-type {
+    letter-spacing: normal;
+    font-size: 24px;
+}
+
+.container-2 > :nth-child(3) {
+    padding-top: 32px;
+}
+
+form {
+    gap: 16px;
+}
+
+section {
+    gap: 64px;
+}
+
+input {
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    height: 32px;
+    width: 20vw;
+}
+
+input:focus {
+    outline: 1px solid blue;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background-color: #596d48;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 50px;
+    width: 250px;
+}
+
+button:hover {
+    box-shadow: 2px 2px 5px #aaaaaa;
+    cursor: pointer;
+}
