@@ -10,8 +10,9 @@ const main = (event) => {
         if (password !== confirmPassword.value) {
             confirmPassword.setCustomValidity("Passwords do not match.");
             confirmPassword.reportValidity();
-            confirmPassword.addEventListener("input", (event) => {
+            confirmPassword.addEventListener("input", function handler(event) {
                 confirmPassword.setCustomValidity("");
+                confirmPassword.removeEventListener("input", handler);
             });
             return;
         }
