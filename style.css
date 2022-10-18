@@ -1,16 +1,13 @@
-body {
+:root {
+    --text-font: "Arial Bold", sans-serif;
+  }
+
+body, html {
     margin: 0;
     height: 100vh;
 }
 
-body > :first-child,
-.container-1,
-.container-2,
-.container-2 > :first-child,
-.logo,
-form,
-section,
-section > * {
+body > :first-child {
     display: flex;
 }
 
@@ -18,15 +15,8 @@ section > * {
 .container-2,
 form,
 section > * {
+    display: flex;
     flex-direction: column;
-}
-
-.container-1 > p,
-.container-2 > :first-child,
-.container-2 > :nth-child(2),
-button,
-button + p {
-    font-family: "Arial Bold", sans-serif;
 }
 
 .container-1 {
@@ -43,6 +33,7 @@ button + p {
     text-align: center;
     color: white;
     font-size: 11px;
+    font-family: var(--text-font);
 }
 
 @font-face {
@@ -51,6 +42,7 @@ button + p {
 }
 
 .logo {
+    display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -78,10 +70,12 @@ button + p {
 }
 
 .container-2 > :first-child {
+    display: flex;
     align-items: flex-end;
     padding-bottom: 32px;
     font-size: 32px;
     font-weight: bold;
+    font-family: var(--text-font);
 }
 
 .container-2 > * {
@@ -97,6 +91,7 @@ button + p {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
+    font-family: var(--text-font);
 }
 
 .container-2 > :nth-child(2) > p:first-of-type {
@@ -109,17 +104,19 @@ button + p {
 }
 
 form {
+    display: flex;
     gap: 16px;
 }
 
 section {
+    display: flex;
     gap: 64px;
 }
 
 input {
     border: 1px solid #e5e7eb;
     border-radius: 5px;
-    height: 4vh;
+    height: 32px;
     width: 20vw;
 }
 
@@ -137,6 +134,11 @@ button {
     font-size: 16px;
     height: 50px;
     width: 250px;
+    font-family: var(--text-font);
+}
+
+button + p {
+    font-family: var(--text-font);
 }
 
 button:hover {

@@ -22,8 +22,6 @@ const main = (event) => {
     });
 };
 
-const formHandler = (event, form) => {};
-
 window.addEventListener("DOMContentLoaded", (event) => {
     main(event);
 });
